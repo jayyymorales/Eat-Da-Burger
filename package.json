@@ -7,15 +7,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tgwalker93/burger.git"
+    "url": "git+https://github.com/jayyymorales/burger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tgwalker93/burger/issues"
+    "url": "https://github.com/jayyymorales/burger/issues"
   },
-  "homepage": "https://github.com/tgwalker93/burger#readme",
+  "homepage": "https://github.com/jayyymorales/burger#readme",
   "dependencies": {
     "body-parser": "^1.18.1",
     "express": "^4.15.4",
