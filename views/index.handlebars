@@ -1,0 +1,61 @@
+<div class="container">
+  <center>
+    <div class="jumbotron">
+      <img src="../assets/img/eat-this-burger.svg" alt="burger" style="width:304px;height:228px;">
+      <h1>Eat Da Burger</h1>
+    </div>
+</div>
+
+<div class="container">
+  <center>
+    <div class="col-md-12" id=formcolor>
+      <h2>Get your grub on!</h2>
+      <form class="create-update-form" action="/" method="POST">
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
+        <div class="form-group">
+          <label>Devoured?</label><br>
+          <input type="radio" name="devoured" value="0" checked> Save for later
+          <input type="radio" name="devoured" value="1">Devour
+        </div>
+        <button id="addBurger" type="submit" class="btn btn-primary btn-lg">Add Burger</button>
+      </form>
+    </div>
+</div>
+
+<div class="container">
+  <center>
+    <div class="col-md-6" id="resultcolors">
+      <h2>Saving for later...</h2>
+      <ul>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+
+            <form action="/{{this.id}}?_method=PUT" method="POST">
+              {{this.burger_name}}
+              <input type="hidden" name="devoured" value="true">
+              <button type="submit" class="btn btn-primary btn-xs">Grub!</button>
+            </form>
+
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md-6" id="resultcolors">
+      <h2>Burger graveyard!</h2>
+      <ul>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <form action="/{{this.id}}?_method=PUT" method="POST">
+              {{this.burger_name}}
+              <input type="hidden" name="devoured" value="false">
+              <button type="submit" class="btn btn-primary btn-xs">Throw it up!</button>
+            </form>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+</div>

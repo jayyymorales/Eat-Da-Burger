@@ -1,0 +1,24 @@
+body {
+    background-color: #FFFFFF !important
+}
+
+.jumbotron {
+  background-color: #494949 !important;
+  border-radius: 40px;
+  color: #41EAD4;
+}
+
+#formcolor {
+  border-radius: 40px;
+  color: #FFFFFF;
+  background-color: #7C7A7A !important;
+  padding-bottom: 25px;
+  margin-bottom: 25px
+}
+
+#resultcolors {
+  margin: 0px 0px;
+  border-radius: 40px;
+  color: #41EAD4;
+  background-color: #494949 !important
+}
